@@ -59,7 +59,8 @@
                                                 {% endif %}
                                             </td>
                                             <td>{{ signal.strategy }}</td>
-                                            <td>{{ signal.income_at|date('d.m.y H:i') }}</td>
+                                            <!-- Asia/Bangkok (+07)	Aug 26 2021 13:45:00	GMT +07:00	 	+25200 -->
+                                            <td>{{ (signal.income_at +25200) |date('d.m.y H:i', 'Asia/Bangkok') }}</td>
                                             <td>{{ signal.state }}</td>
                                             <td class="text-muted"><span class="span-md">{{ signal.options }}</span></td>
                                         </tr>
